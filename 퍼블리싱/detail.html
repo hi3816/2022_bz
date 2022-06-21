@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http="eqrndv=" X-UA-C>
+    <meta name="viewport" content="width=device-width, initial-sac, maxinum-scale=1, user-scalable=no">
+    <title>상세</title>
+
+    <link rel="stylesheet" href="..\resources\css\fonts.css">
+    <link rel="stylesheet" href="..\resources\css\bootstrap.min.css">
+    <link rel="stylesheet" href="..\resources\css\common.css">
+    <link rel="stylesheet" href="..\resources\css\main.css">
+
+    <script src="../resources/js/jquery-3.4.1.min.js"></script>
+
+    <script>
+
+        $(document).ready(function () {
+            //댑글달기 버튼 클릭시 textarea 포커스주기 
+            $('#add-comment').click(function () {
+                $('#text-box').focus();
+            });
+
+            // 대댓글보기 클릭시 열고닫힘 토글 
+            $('#see-btn').click(function () {
+                $('.open-see-comment-wrap').toggleClass('on');
+            });
+
+
+            var modalTarget = $(".white-box1");
+            var modalTarget2 = $(".white-box2");
+            var mask = $('.black-mask');
+
+            //전체글 삭제 
+            $('#top-dot').click(function (event) {
+                event.stopPropagation();
+                modalTarget.toggle();
+                mask.toggle();
+            });
+
+            //답글달기 삭제
+            $('.middle-dot').click(function (event) {
+                event.stopPropagation();
+                modalTarget2.toggle();
+                mask.toggle();
+            });
+
+
+            //모달창 속 취소버큰 클릭시 삭제
+            $('.del-btn').click(function () {
+                modalTarget.hide();
+                modalTarget2.hide();
+                mask.hide();
+            });
+
+            //외부클릭시 닫힘
+            $(document).click(function () {
+                modalTarget.hide();
+                modalTarget2.hide();
+                mask.hide();
+            });
+
+
+            // 좋아요 클릭시 토글 
+            $('#heart').click(function () {
+                $(this).toggleClass('active');
+            });
+
+
+
+
+        });
+
+    </script>
+</head>
+
+<body>
+    <!-- 모달 -->
+    
+    <div class="white-box1">
+        <a href="#" class="del-btn">삭제</a>
+        <a href="edit.html" class="edit-btn">수정</a>
+        <a href="#" class=".btn-cancel">취소</a>
+    </div>
+
+    <div class="white-box2">
+        <a href="#" class="del-btn">삭제</a>
+        <a href="#" class=".btn-cancel">취소</a>
+    </div>
+    <div class="black-mask"></div>
+
+    <header class="list-header">
+        <div class="layout">
+            <div class="logo"><a href="list.html"><img src="../resources/images/logo.png"></a></div>
+            <div class="header-right">
+                <a href="edit.html" class="link"><img src="../resources/images/ico-link.png"></a>
+                <div class="profile-img">
+                    <img src="../resources/images/sample.jpg">
+                </div>
+                <p>나이키님</p>
+                <a href="login.html" class="logout-box">로그아웃</a>
+            </div>
+        </div>
+    </header>
+    <div class="detail-wrap">
+        <div class="sample-img">
+            <img src="../resources/images/sample.jpg">
+        </div>
+        <div class="detail-right">
+            <div class="right-top">
+                <div class="profile">
+                    <img src="../resources/images/sample.jpg">
+                </div>
+                <strong>nike</strong>
+                <div class="dot" id="top-dot"><img src="../resources/images/dot.png"></div>
+            </div>
+            <div class="right-middle">
+                <ul class="post">
+                    <div class="img"><img src="../resources/images/sample.jpg"></div>
+                    <div class=txt>
+                        <strong>nike</strong>
+                        나이키나이키나이키나이키나이키나이키나이키나이키나이키나이키
+                        <div class="comment">
+                            <button type="button" id="add-comment">답글달기</button>
+                            <button type="button" class="middle-dot">
+                                <img src="../resources/images/dot.png">
+                            </button>
+                        </div>
+                        <div class="see-comment">
+                            <button type="button" id="see-btn">답글보기</button>
+                        </div>
+                        <div class = "open-see-comment-wrap">
+                            <div class="open-see-comment">
+                                <div class="img"><img src="../resources/images/sample.jpg"></div>
+                                <span class="txt"><strong>nike</strong>나이키나이키나이키나이키나이키나이키나이키나이키나이키나이키나이키나이키
+                                    <div class="comment">
+                                        <button type="button">답글달기</button>
+                                        <button type="button"class="middle-dot">
+                                            <img src="../resources/images/dot.png">
+                                        </button>
+                                    </div>
+                            </div>
+                            <div class="open-see-comment">
+                                <div class="img"><img src="../resources/images/sample.jpg"></div>
+                                <span class="txt"><strong>nike</strong>나이키나이키나이키나이키나이키나이키나이키나이키나이키나이키나이키나이키
+                                    <div class="comment">
+                                        <button type="button">답글달기</button>
+                                        <button type="button"class="middle-dot">
+                                            <img src="../resources/images/dot.png">
+                                        </button>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </ul>
+            </div>
+            <div class="right-bottom">
+                <div class="like-wrap">
+                    <div id="heart" class="heart"></div>
+                    <strong>좋아요</strong>
+                </div>
+                <div class="texting-comment">
+                    <img src="../resources/images/comment.png">
+                    <input type="text" id="text-box" placeholder="댓글 달기..">
+                    <button type="button">게시</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        @2022 Instagram from <Meta:compat></Meta:compat>
+    </footer>
+
+
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http="eqrndv=" X-UA-C>
+    <meta name="viewport" content="width=device-width, initial-sac, maxinum-scale=1, user-scalable=no">
+    <title>등록</title>
+
+    <link rel="stylesheet" href="..\resources\css\fonts.css">
+    <!-- <link rel="stylesheet" href="..\resources\css\bootstrap.min.css"> -->
+    <link rel="stylesheet" href="..\resources\css\common.css">
+    <link rel="stylesheet" href="..\resources\css\main.css">
+
+    <script src="../resources/js/jquery-3.4.1.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('.header-right .profile-img').click(function () {
+                $('.list-header .logout-box').toggle();
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <header class="list-header">
+        <div class="layout">
+            <div class="logo"><a href="list.html"><img src="../resources/images/logo.png"></a></div>
+            <div class="header-right">
+                <a href="edit.html" class="link"><img src="../resources/images/ico-link.png"></a>
+                <div class="profile-img">
+                    <img src="../resources/images/sample.jpg">
+                </div>
+                <p>나이키님</p>
+                <a href="login.html" class="logout-box">로그아웃</a>
+            </div>
+        </div>
+    </header>
+    <div class=register-wrap>
+        <div class="register-profile"></div>
+        <div class="register-middle"><textarea placeholder="문구입력"></textarea></div>
+        <div class="register-bottom">
+            <span class="file-wrap">
+                <label for="file-upload"><img src="../resources/images/fild-upload.png"></label>
+                <input type="file" id="file-upload">
+            </span>
+            <div class="button-wrap">
+                <button type="button">취소</button>
+                <button type="button">등록</button>
+            </div>
+        </div>
+    </div>
+    <footer>
+        @2022 Instagram from <Meta:compat></Meta:compat>
+    </footer>
+
+
+
+
+
+
+</body>
+
+</html>

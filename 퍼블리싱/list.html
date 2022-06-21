@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http="eqrndv=" X-UA-C>
+    <meta name="viewport" content="width=device-width, initial-sac, maxinum-scale=1, user-scalable=no">
+    <title>목록</title>
+
+    <link rel="stylesheet" href="..\resources\css\fonts.css">
+    <link rel="stylesheet" href="..\resources\css\bootstrap.min.css">
+    <link rel="stylesheet" href="..\resources\css\common.css">
+    <link rel="stylesheet" href="..\resources\css\main.css">
+
+    <script src="../resources/js/jquery-3.4.1.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('.header-right .profile-img').click(function () {
+                $('.list-header .logout-box').toggle();
+            });
+        });
+    </script>
+
+</head>
+
+<body>
+    <header class="list-header">
+        <div class="layout">
+            <div class="logo"><a href="list.html"><img src="../resources/images/logo.png"></a></div>
+            <div class="header-right">
+                <a href="register.html" class="link"><img src="../resources/images/ico-link.png"></a>
+                <div class="profile-img">
+                    <img src="../resources/images/sample.jpg">
+                </div>
+                <p>나이키님</p>
+                <a href="login.html" class="logout-box">로그아웃</a>
+            </div>
+        </div>
+    </header>
+    <div class="list-wrap">
+        <div class="list-info">
+            <div class="info-img"><img src="../resources/images/sample.jpg"></div>
+            <div class="info">
+                <div class="name">나이키</div>
+                <div class="posting">게시글 323</div>
+                <p>
+                    <strong>나이키 더 현대 서울점</strong>
+                    MAKE SPORT A DAILY HABIT
+                </p>
+            </div>
+        </div>
+        <ul class="sample-imgs">
+            <li><a href="detail.html"><img src="../resources/images/sample.jpg"></a></li>
+            <li><a href="detail.html"><img src="../resources/images/sample.jpg"></a></li>
+            <li><a href="detail.html"><img src="../resources/images/sample.jpg"></a></li>
+            <li><a href="detail.html"><img src="../resources/images/sample.jpg"></a></li>
+            <li><a href="detail.html"><img src="../resources/images/sample.jpg"></a></li>
+            <li><a href="detail.html"><img src="../resources/images/sample.jpg"></a></li>
+
+        </ul>
+
+    </div>
+    <footer>
+        @2022 Instagram from <Meta:compat></Meta:compat>
+    </footer>
+
+
+</body>
+
+</html>
